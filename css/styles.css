@@ -336,7 +336,6 @@ a {
   background: #126de4;
 }
 
-
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
@@ -407,7 +406,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  
   .plan__name {
     font-size: 1.4rem;
   }
@@ -769,4 +767,31 @@ a {
 .block-plans .card {
   max-width: 500px;
   margin: 0 auto;
-} 
+}
+
+/* Features */
+/* .feature .icon {
+  width: 20px;
+  height: 20px;
+} */
+
+.feature {
+  margin-bottom: 8rem;
+}
+
+.feature .grid {
+  align-items: center;
+}
+
+.feature .media {
+flex-direction: column;
+}
+
+.feature .media__image {
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature__img {
+  width: 100%;
+}
