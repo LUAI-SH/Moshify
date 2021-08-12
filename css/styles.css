@@ -21,6 +21,12 @@
 }
 
 /* Typography */
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -30,7 +36,7 @@ body {
   font-size: 2.4rem;
   line-height: 1.5;
   color: var(--color-body);
-  padding: 2rem; /* temp */
+  /* padding: 2rem; temp */
 }
 
 h1,
@@ -51,6 +57,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -140,7 +147,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -151,6 +157,8 @@ a {
 .list--tick {
   padding-left: 2rem;
   list-style-image: url(../images/tick.svg);
+  color: var(--color-headings);
+
 }
 
 .list--tick .list__item {
@@ -423,6 +431,7 @@ a {
 /* Media */
 .media {
   display: flex;
+  margin-bottom: 2.5rem;
 }
 
 .media__image {
@@ -591,17 +600,19 @@ a {
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
   color: white;
 }
 
 .block--skewed-right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /* Collapsibles */
@@ -702,14 +713,6 @@ a {
 
 /* Hero */
 
-/* .hero__content {
-  text-align: left;
-} */
-
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-
 .hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
@@ -794,4 +797,34 @@ flex-direction: column;
 
 .feature__img {
   width: 100%;
+}
+
+/* Showcase Block */
+
+.block-showcase {
+  padding: 10rem 0;
+}
+
+.block-showcase .block__heading {
+  margin-bottom: 5rem;
+}
+
+ .block-showcase__img > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__img {
+    justify-self: end;
+  }
+
+  .block-showcase__img > img {
+    width: auto;
+    justify-self: end;
+    max-width: 700px;
+  }
 }
