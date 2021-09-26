@@ -1,0 +1,8 @@
+{
+  "name": "Moshify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LUAI-SH/Moshify.git",
+  "author": "Luai <eng.luaish@gmail.com>",
+  "license": "MIT"
+}
